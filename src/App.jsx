@@ -1,25 +1,28 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
 
 function App() {
-
   return (
+    <BrowserRouter>
 
-    <main className="min-h-screen bg-[#fffafa] overflow-hidden">
+      <main className="min-h-screen bg-white overflow-x-clip">
 
-      <Navbar />
+        <Navbar />
 
-      <Hero />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
 
-      <Features />
+        <Footer />
 
-    </main>
+      </main>
 
+    </BrowserRouter>
   );
-
 }
 
 export default App;

@@ -1,126 +1,111 @@
 import React from "react";
 
 import mask from "../assets/Mask group.png";
+import image1 from "../assets/image 1.png";
 import image2 from "../assets/image 2.png";
 import image4 from "../assets/image 4.png";
 
 function Hero() {
-
   return (
-
-    <section className="relative pt-5 md:pt-8 text-center px-5">
-
-      {/* FLOATING SHOPPING BASKET */}
-
+    <section className="relative overflow-x-clip pt-3 md:pt-5 pb-4 text-center px-4 sm:px-6">
+      {/* TOP-LEFT FLOATING GROCERY BASKET */}
       <img
         src={image4}
         alt="Shopping basket"
         className="
+          hidden sm:block
           absolute
           z-10
-          top-0
-          left-[5%] md:left-[9%]
-          w-20 sm:w-24 md:w-36
+          top-1 md:top-2
+          left-[5%] lg:left-[12%]
+          w-[68px] md:w-[96px]
           h-auto
           object-contain
           -rotate-12
+          pointer-events-none
         "
       />
 
-      {/* FLOATING FOOD IMAGE */}
-
+      {/* TOP-RIGHT FLOATING FOOD COMBO */}
       <img
         src={image2}
         alt="Food delivery"
         className="
+          hidden sm:block
           absolute
           z-10
-          top-0
-          right-[5%] md:right-[9%]
-          w-20 sm:w-24 md:w-36
+          top-1 md:top-2
+          right-[5%] lg:right-[12%]
+          w-[72px] md:w-[104px]
           h-auto
           object-contain
           rotate-12
+          pointer-events-none
         "
       />
 
-      {/* MAIN CONTENT */}
-
+      {/* HEADLINE, DESCRIPTION & BUTTONS */}
       <div className="relative z-20 max-w-4xl mx-auto">
-
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.1] text-[#252525]">
-
+        <h1 className="text-[32px] sm:text-[46px] md:text-[56px] font-black tracking-[-0.025em] leading-[1.08] text-[#1f1f1f]">
           DELIVERY MANAGEMENT
-
           <br />
-
-          SOFTWARE <span className="font-light">WITH</span>
-
+          SOFTWARE <span className="font-normal">WITH</span>
           <br />
-
-          <span className="text-red-500 italic font-semibold">
+          <span className="text-[#ff293a] italic font-bold">
             Last Mile Excellence
           </span>
-
         </h1>
 
-        {/* DESCRIPTION */}
-
-        <p className="text-gray-500 text-xs md:text-sm max-w-xl mx-auto mt-5 leading-6">
-
-          An effective delivery management system automates and
-          simplifies the way you manage delivery processes.
-          Leverage your business through smart delivery solutions.
-
+        <p className="text-[#666666] text-xs md:text-[13px] max-w-[540px] mx-auto mt-4 leading-[1.6]">
+          An effective delivery management software automates and simplifies the
+          whole top-to-end delivery process. Leverage your revenue through
+          delivery and dispatch software.
         </p>
 
-        {/* BUTTONS */}
-
-        <div className="flex justify-center gap-4 mt-6">
-
-          <button className="bg-red-500 text-white px-7 py-3 rounded-full text-xs font-semibold shadow-lg shadow-red-200 hover:bg-red-600 transition">
-
+        <div className="flex items-center justify-center gap-3.5 mt-6">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center bg-gradient-to-r from-[#ff3b30] to-[#e61938] text-white w-[142px] h-[38px] rounded-full text-xs font-semibold shadow-md shadow-red-200/70 hover:opacity-95 transition"
+          >
             Request a Demo
-
           </button>
 
-          <button className="bg-white border border-gray-300 text-gray-800 px-7 py-3 rounded-full text-xs font-semibold hover:bg-gray-900 hover:text-white transition">
-
+          <a
+            href="#features"
+            className="inline-flex items-center justify-center bg-white border border-gray-300 text-[#222222] w-[122px] h-[38px] rounded-full text-xs font-semibold hover:border-gray-900 hover:bg-gray-900 hover:text-white transition"
+          >
             Features
-
-          </button>
-
+          </a>
         </div>
-
       </div>
 
-
-      {/* MAIN ILLUSTRATION */}
-
-      <div className="relative w-full max-w-7xl mx-auto mt-4 md:mt-6 h-[300px] sm:h-[350px] md:h-[400px]">
+      {/* HERO ILLUSTRATION (1280 x 418 PROPORTION + UPPER-RIGHT BOX ASSET) */}
+      <div className="relative max-w-[1280px] mx-auto mt-2 md:mt-3">
+        <img
+          src={image1}
+          alt="Hands holding parcel box"
+          style={{ width: "128px", height: "128px", opacity: 1 }}
+          className="
+            hidden lg:block
+            absolute
+            z-20
+            top-1
+            left-[71.875%]
+            w-[128px]
+            h-[128px]
+            object-contain
+            pointer-events-none
+          "
+        />
 
         <img
           src={mask}
           alt="Delivery rider, buildings and globe"
-          className="
-            absolute
-            bottom-0
-            left-1/2
-            -translate-x-1/2
-            w-[125%]
-            max-w-none
-            h-full
-            object-contain
-            object-bottom
-          "
+          className="relative z-10 w-full max-w-[1280px] md:h-[418px] mx-auto object-contain"
         />
-
       </div>
-
     </section>
-
   );
-
 }
 
 export default Hero;

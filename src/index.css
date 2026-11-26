@@ -1,1 +1,30 @@
 @import "tailwindcss";
+
+@layer base {
+  html {
+    font-family: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #202020;
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Curved top/bottom wave shape for the lower red promo banner */
+.promo-wave-banner {
+  background: linear-gradient(90deg, #ff383c 0%, #e51738 100%);
+  clip-path: ellipse(115% 48% at 50% 50%);
+}
+
+@media (max-width: 767px) {
+  .promo-wave-banner {
+    clip-path: none;
+    border-radius: 20px;
+  }
+}
