@@ -1,5 +1,5 @@
 import React from "react";
-import promoPhoneHand from "../assets/Group 70.png";
+import promoPhoneHand from "../assets/Group 70(1).png";
 
 function SmarterPromoBanner() {
   return (
@@ -44,7 +44,22 @@ function SmarterPromoBanner() {
           </div>
 
           {/* Right Image */}
-          <div className="md:col-span-6 flex justify-center md:justify-end self-end relative z-10">
+          <div 
+          className="
+          hidden lg:block
+          absolute
+          z-20
+          w-[600px]
+          h-[245px]
+          max-w-none
+          right-0
+          bottom-0
+          object-contain
+          object-bottom
+          pointer-events-none
+          select-none
+          "
+          >
             <img
               src={promoPhoneHand}
               alt="Delifo mobile app growth and analytics"

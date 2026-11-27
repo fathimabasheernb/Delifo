@@ -1,63 +1,132 @@
+
 import React from "react";
 import Delivery21 from "../assets/Delivery 2 1.png";
 
 function CTASection() {
   return (
-    <section className="bg-white px-6 md:px-10 pt-2">
-      <div className="relative max-w-[1214.5px] mx-auto lg:h-[270.1131px] flex items-end">
+    <section className="relative w-full bg-white z-30">
+
+      <div className="relative w-full min-h-[300px] lg:min-h-[300px]">
+
+        {/* Red Banner */}
         <div
-          style={{ minHeight: "97.3135px", opacity: 1 }}
           className="
-            w-full
-            lg:w-[1009.8689px]
-            lg:h-[97.3135px]
-            lg:ml-auto
-            bg-gradient-to-r from-[#ff383c] to-[#e51738]
-            rounded-[6px]
-            px-6 sm:px-8 lg:pl-[45px] lg:pr-8
-            py-5 lg:py-0
-            flex flex-col sm:flex-row items-center justify-between gap-4
+            absolute
+            right-0
+            bottom-0
+            w-[82%]
+            sm:w-[85%]
+            lg:w-[88%]
+            min-h-[115px]
+            lg:h-[115px]
+            bg-gradient-to-r
+            from-[#ff383c]
+            to-[#e51738]
+            rounded-l-[8px]
+            z-10
+            flex
+            items-center
           "
         >
-          <h2 className="text-white text-base sm:text-lg lg:text-[21px] font-bold text-center sm:text-left leading-snug">
-            Build Your Delivery Management Services On Delifo
-          </h2>
 
-          <button
-            type="button"
-            className="bg-white text-[#e51738] px-6 py-2 rounded-full text-xs font-bold hover:bg-gray-100 transition shrink-0"
+          {/* Banner Content */}
+          <div
+            className="
+              w-full
+              pl-[110px]
+              sm:pl-[150px]
+              md:pl-[190px]
+              lg:pl-[230px]
+              pr-5
+              sm:pr-8
+              lg:pr-16
+              flex
+              flex-col
+              sm:flex-row
+              items-center
+              justify-between
+              gap-4
+            "
           >
-            Explore More
-          </button>
+            <h2
+              className="
+                text-white
+                text-sm
+                sm:text-base
+                md:text-lg
+                lg:text-[21px]
+                font-bold
+                leading-snug
+                text-center
+                sm:text-left
+              "
+            >
+              Build Your Delivery Management Services On Delifo
+            </h2>
+
+            <button
+              type="button"
+              className="
+                relative
+                overflow-hidden
+                shrink-0
+                bg-white
+                text-[#e51738]
+                px-7
+                py-3
+                rounded-full
+                text-xs
+                font-bold
+                shadow-md
+                transition-all
+                duration-300
+                hover:bg-[#252525]
+                hover:text-white
+                hover:scale-105
+                hover:shadow-xl
+                active:scale-95
+              "
+            >
+              <span className="relative z-10">
+                Explore More
+              </span>
+            </button>
+          </div>
         </div>
 
-        <img
-          src={Delivery21}
-          alt="Delivery bike"
-          style={{ width: "299.2162px", height: "270.1131px", opacity: 1 }}
+        {/* Delivery Bike Overlay */}
+        <div
           className="
-            hidden lg:block
-            pointer-events-none
-            select-none
             absolute
-            left-6
+            left-0
             bottom-0
-            w-[299.2162px]
-            h-[270.1131px]
-            max-w-none
-            object-contain
-            object-bottom
-            z-10
+            z-20
+            w-[190px]
+            sm:w-[230px]
+            md:w-[260px]
+            lg:w-[299px]
+            group
           "
-        />
-
-        <div className="lg:hidden flex justify-center mt-4 w-full">
+        >
           <img
             src={Delivery21}
             alt="Delivery bike"
-            className="w-44 sm:w-56 h-auto object-contain pointer-events-none"
+            className="
+              w-full
+              h-auto
+              object-contain
+              object-bottom
+              transition-transform
+              duration-700
+              ease-in-out
+              group-hover:-translate-y-3
+              group-hover:translate-x-2
+              pointer-events-none
+              select-none
+            "
           />
         </div>
+
       </div>
     </section>
   );
